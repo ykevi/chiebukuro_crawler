@@ -13,8 +13,11 @@ def kensaku(super_url)
 		best_answer_html = doc.css('//div[@class="mdPstd mdPstdBA othrAns clrfx"]/div/div/div/p').to_s
 		best_answer = Sanitize.clean(best_answer_html)
 
-		puts "===[質問]===:\n" + question + "\n\n\n"
+		if question.empty?
+			question = "この質問は、18歳未満の方は閲覧できません。\n以下のURLからログインしてご確認下さい。\n" + url
+		end
 
+		puts "===[質問]===:\n" + question + "\n\n\n"
 		puts "===[ベストアンサー]===:\n" + best_answer + "\n\n\n\n"
 	end
 end
