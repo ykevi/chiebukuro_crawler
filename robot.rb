@@ -1,11 +1,3 @@
-require 'rubygems'
-require 'nokogiri'
-require 'open-uri'
-require 'pry'
-require 'sanitize'
-
-#url = "http://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q12159472792"
-
 class Robot
 
 def kensaku(super_url)
